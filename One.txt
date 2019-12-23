@@ -1,0 +1,38 @@
+# hufs-gardener
+<resources>
+<!-- Base application theme. -->
+<style name = "AppTheme" parent = "Theme.AppCompat.Light.DarkActionBar">
+  <!-- Customize your theme here. -->
+  <item name = "colorPrimary">@color/colorPrimary</item>
+  <item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
+  <item name = "colorAccent">@color/colorAccent</item>
+</style>
+<resources>
+
+
+<resources>
+  <!-- Base application theme. -->
+  <style name = "AppTheme" parent = "android:Theme.Holo.Light.DarkActionBar"/>
+<resources>
+
+
+apply plugin: "com.android.application"
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.2"
+
+  defaultConfig {
+    applicationld "com.ddmanager.toast"
+    minSdkVersion 16
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+  bulidTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), proguard-rules.pro
+    }
+  }
+}
