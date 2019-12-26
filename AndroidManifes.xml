@@ -1,0 +1,41 @@
+//manifests 디렉터리는 실제 디렉터리가 아닌 AndroidMainfest.xml 파일을 다른 파일들과 구분하기 위한 가상의 디렉터리
+//앱을 실행하기 위해 필요한 권한은 <manifest>와 <application> 태그 사이에 작성 
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <application
+    	//ADB(Android Debug Bridge)도구를 사용해서 앱 백업과 복구를 가능하게 할 것인지 결정하는 속성
+		//민감한 데이터가 있는 경우(은행, 증권 앱)에는 이 속성을 false로 정의하고 백업 기능을 앱 내에서 별도로 제공 
+        android:allowBackup="true"
+        
+        /* 앱의 아이콘을 정의하는 속성 (앱을 설치했을 때, 폰의 바탕화면에 보이는 아이콘)
+		@mipmap은 XML에서 프로젝트 리스트에 보이는 /res/mipmap 디렉터리를 가리키는 방식
+		자바 코드에서 해당 파일에 접근하고 싶다면 R.mipmap.ic_launcher로 접근해야 함 */
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        
+        /*안드로이드 앱의 타이틀을 정의
+		@string/app_name은 /res/values/strings.xml에 있는 app_name이라는 이름을 가진 태그의 값을 지칭하는 코드
+		XML에서는 @로 시작하는 코드로 작성, 자바에서는 R.string.app_name으로 작성 */ 
+        android:label="@string/app_name"
+        
+        //true로 설정했을 때, 오른쪽에서 왼쪽으로 쓰고 읽는 언어를 지원하기 위한 속성 
+        android:supportsRtl="true"
+        
+		/*앱의 테마를 설정하는 속성 -화면, 텍스트의 색상, 모양 변경다 
+		@style/AppTheme는 /res/values/styles.xml에 정의되어 AppTheme 테마를 적용하라는 의미 */ 
+        android:theme="@style/AppTheme">
+        
+        //안드로이드 앱에서 사용하는 액티비티를 선언하는 부분 
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />  //현재 액티비티를 이 앱의 메인 액티비티로 지정하겠다 
+
+                <category android:name="android.intent.category.LAUNCHER" />  //사용자가 앱에 설치된 앱을 클릭했을 때 실행되어야 할 액티비티로 지정하겠 
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
