@@ -1,4 +1,5 @@
 //코드2-7 /res/layout/activity_main.xml
+// activity_main.xml 사용자에게 보여지는 화면을 구성하는 파일. 이 파일에 버튼이나 텍스트 등을 배치
 
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
@@ -19,3 +20,17 @@
 		app:layout_constraintTop=toTopOf="parent" />
 		
 </android.support.constraint.ConstraintLayout>
+
+/* 
+activity_main.xml 파일에 작성되어 있는 ConstraintLayout
+위지윅으로 버튼 등의 위젯을 배치할 수 있게 해주는 레이아웃 관리자
+
+*속성의 의미
+xmlns:android
+안드로이드의 기본 SDK에 포함되어있는 속성을 위한 XML 네임스페이스 지정
+xmlns:app
+프로젝트에서 사용하는 외부 라이브러리에 포함되어 있는 속성을 위한 XML 네임스페이스 지정
+xmlns:tools
+안드로이드 스튜디오에서 레이아웃 개발을 편하게 작성할 수 있게 도와주는 속성을 위한 XML 네임스페이스를 지정
+실제 앱에서는 적용X
+*/
