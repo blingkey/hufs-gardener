@@ -1,0 +1,10 @@
+//코드5-1 텍스트뷰
+<TextView
+	android:id="@id/textView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:autoLink="phone"
+	android:text="TextVeiw 02=1234-1234"
+	android:textSize="12sp"
+	android:textColor="#FF0000"
+	android:lines="2"  />
