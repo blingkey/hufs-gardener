@@ -1,10 +1,25 @@
 //코드5-1 텍스트뷰
 <TextView
+	//id: 위젯의 이름, 같은 레이아웃 XML 파일에서 유일해야 함/ textView가 실제이름, @+id/는 새로운 아이디의 이름 명명 시 사용
 	android:id="@id/textView"
+	
+	//layout_width,height: 위젯의 너비와 높이 지정 속성
+	//wrap_content: 위젯의 내용을 표현할 수 있을 만큼의 크기로 자동 지정하라, 뷰를 화면에 가득 채우고 싶다면 match_parent 라고 지정
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
+	
+	//autoLink: 자동으로 링크 걸어주는 속성(전화번호, 이메일 주소 설정 시, 클릭했을 때 자동으로 전화 앱이나 이메일 보낼 수 있는 앱 실행)
+	//phone: 전화번호 링크, email: 이메일 주소 링크, web: 웹페이지 주소 링크, all/none: 자동으로 링크 모두 걸고/걸지 않는 속성
 	android:autoLink="phone"
+	
+	//화면에 보여질 문자열을 설정하는 텍스트뷰의 가장 기본적인 속성
 	android:text="TextVeiw 02=1234-1234"
+	
+	//텍스트 크기를 12sp로 지정, sp(Scale-independent Pixel): 해상도와 사용자가 지정한 글꼴 크기에 따라 텍스트 크기 변경
 	android:textSize="12sp"
+	
+	//텍스트 색상
 	android:textColor="#FF0000"
+	
+	//텍스트뷰의 높이를 텍스트 2줄을 표시할 수 있는 크기로 설정
 	android:lines="2"  />
