@@ -4,8 +4,18 @@
 	android:id="@+id/editText"
 	android:layout_width="100dp"
 	android:layout_height="wrap_content"
+	
+	//에디트텍스트의 텍스트를 어떻게 배치할지 결정, View클래스가 지원하는 속성이기 때문에 다른 위젯에서도 사용 가능
+	//start, top: 왼쪽 상단/ center_horizontal,vertical 속성은 다른 속성과 함께 사용 가능
 	android:gravity="center"
+	
+	//사용자가 입력하는 문자열 형태 지정
+	//text: 모든 문자열, number: 숫자만, phone: 전화번호 입력
 	android:inputType="text"
+	
+	//에디트텍스트의 배경 색상 지정 속성(입력하는 글자 아래로 보여주는 밑줄)
 	android:backgroundTint="#FF0000"
+	
+	//사용자가 입력하기 전에 미리 보여지는 문자열
 	android:hint="type here"
 	android:textColor="#FF0000"  />
