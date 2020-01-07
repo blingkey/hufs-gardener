@@ -1,0 +1,15 @@
+//코드5-4 버튼 
+
+<Button
+	android:id="@+id/button"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	
+	//버튼의  색상 지정 
+	android:backgroundTrint="#FF0000"
+	//버튼의 영어 텍스트를 대문자로 지정(true:대문자, false:개발자가 지정한 텍스트 그대로) 
+	android:textAllCaps="false"
+	//텍스트 색상을 흰색으로 지정 
+	android:textColor="#FFFFFF"
+	//버튼에 보이는 텍스트 설정 
+	android:text="button"  />
