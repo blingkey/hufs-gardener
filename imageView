@@ -1,0 +1,12 @@
+//코드5-6 이미지뷰
+<TextView
+	android:id="@+id/imageView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	
+	//이미지뷰의 배경 색상 지정하는 속성 
+	android:background="@android:color/darker_gray"
+	//이미지를 어떻게 보여줄지를 정하는 속성 
+	android:scaleType:"fitCenter"
+	//이미지뷰의 이미지 지정하는 속성 
+	android:src="@drawable/anroid"  />
