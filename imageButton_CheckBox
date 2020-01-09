@@ -1,0 +1,16 @@
+//코드5-8 이미지버튼- 버튼에 이미지 표시할 수 있는 위젯 
+<TextButton
+	android:id="@+id/imageButton"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	andorid:src="@mipmap/ic_launcher" />
+	
+
+//코드5-9 체크박스- 사용자가 특정 항목 선택할 수 있게 해주는 위젯  
+<CheckBox
+	android:id="@id/checkBox"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="CheckBox"
+	android:checked="true"
+	android:clickable="true" />
