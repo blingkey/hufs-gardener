@@ -1,0 +1,27 @@
+//코드5-12 라디오 버튼: 사용자가 선택한 것을 표시하는 위젯, ex) 4개의 라디오버튼 번갈아가면서 선택가능 하지만, 선택한 것을 다시 해제는 불가능
+<RadioButton
+	android:id="@+id/radioButton"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	
+	//라디오버튼에 선택 표시를 할 것인지 말 것인지를 지정하는 속성, true: 색상표시 false: 빈 원 표시 
+	android:checked="true"
+	//라디오버튼에 보이는 문자열을 지정하는 속성 
+	android:text="RadioButton"
+	//라디오버튼의 원 색상과 선택했을 때 보여지는 원 안의 색상을 변경할 때 사용하는 속성 
+	android:buttonTint="@color/colorPrimary"  /> 
+	
+/*라디오버튼 -대부분의 기능을 CompoundButton 클래스로부터 상속받아 사용
+android.widget.RadioButton 클래스의 메소드
+void toggle() 라디오버튼의 상태를 반대로 변경, 하지만 라디오버튼이 선택된 상태라면 반대로 변경하지 않음 */
+
+//라디오버튼 사용 예제
+final RadioButton radioButton = findViewById(R.id.radioButton);
+final TextView textView = findViewById(R.id.textView);
+
+radioButton.setOnCheckedChangeListener(new CompundButon.onCheckedChangeListener() {
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		textView.setText("" + isChecked);
+	}
+}); 
