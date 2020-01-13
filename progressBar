@@ -1,0 +1,50 @@
+//프로그레스바: 로딩 상태를 표시하는 용도로 사용하는 위젯 
+//코드5-13 프로그레스바(원형 -잠시만 기다려도 되는 경우 사용)
+<ProgressBar
+	android:id="@+id/progressBar"
+	
+	//프로그레스바의 모양을 지정하는 속성, 기본모양 -원형 
+	style="?android:attr/progressBarStyle"
+	 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	
+	//프로그레스바의 색상을 지정 
+	android:indeterminateTint="#FF0000"  />
+
+//코드5-14 프로그래스바(직선 -어느 정도를 기다려야 하는지 사용자에게 계속 알려줘야 하는 경우 사용) 
+<ProgressBar
+	android:id="@+id/progressBar"
+	
+	//프로그래스의 모양을 직선 형태로 지정 
+	style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+	
+	android:layout_width="100dp"
+	android:layout_height="wrap_content"
+	
+	//프로그레스가 보여줄 수 있는 최대 값, 사용자는 언제까지 진행되어야 완료가 되는지를 직관적으로 알 수 있음 
+	android:max="100"
+	//프로그레스바의 현재 진행 상태 지정, 서버에서 데이터를 가지고 오면서 이 값의 일정 양을 증가시키면서 사용자는 현재 로딩 상태가 어떤지를 알 수 있음 
+	android:progress="50"
+	//프로그레스바의 현재 진행 상태를 표시하는 progress 속성에 따라 표시되는 직선 모양 바의 색상을 변경하고 싶을 때 지정하는 속성 
+	android:progressTint="#FF0000"
+	//프로그레스바의 최대 진행 범위를 보여주는 max값까지 표시되어 있는 배경 색상을 변경하는 속성 
+	android:progressBackgroundTint="0000FF"  />
+	
+//프로그레스바와 관련된 코드
+public class WidgetProgressBarAcivity extends AppCompatActivity {
+	ProgressBar progressBar;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_widget_progressbar);
+		
+		progressBar = findViewById(R.id.progressBar);
+	}
+	
+	public void step(View v) {
+		progressBar.incrementProgressBy(5); //진행 상태를 5씩 증가 
+		//incrementProgressBy() 메소드 대신 setProgress() 메소드를 사용할 수도 있지만, setProgress()메소드는 진행 상태를 증가시키는 것이 아니라, 그냥 설정하는 것이므로 증가분을 합친 최종 값을 설정해야함 
+	}
+} 
