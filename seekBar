@@ -1,12 +1,44 @@
-//코드5-15 시크바
+//코드5-15 시크바: 특정 수치를 조절하는 용도로 사용하는 위젯(음악 볼륨 조정, 숫자 값 변경...) 
 <SeekBar
 	android:id="@+id/seekBar"
-	android:layoutwidth="100dp"
+	android:layout_width="100dp"
 	android:layout_height="wrap_content"
+	
+	//시크바로 설정할 수 있는 최대 값 
 	android:max="100"
+	//시크바의 현재 상태를 설정하는 속성 
 	android:progress="50"
+	//시크바의 현재 상태를 보여주는 직선 형태의 색상을 변경하는 속성 
 	android:progressTint="#0000FF"
+	//시크바에 보여지는 직선 형태의 배경 색상을 변경하는 속성 
 	android:progressBackgroundTint="#000000"
+	//시크바의 권장 값을 설정하는 속성 
 	android:secondaryProgress="80"
+	//설정한 값까지의 배경색을 지정하는 속성 
 	android:secondaryProgressTint="#FF0000"
+	//시크바의 손잡이를 지정하는 속성 
 	android:thumbTint="#0000FF"  /> 
+	
+//시크바는 직선 형태의 프로그래스바와 유사, ProgressBar를 상속한 AbsSeekBar를 상속
+
+//시크바를 사용하는 실제 코드
+SeekBar seekBar = findViewById(R.id.seekBar);
+final TextView textView = findViewById(R.id.textView);
+
+seekBar.setOnSeekBarChangeListener(new SeekBar.onSeekBarChangeListener() {
+	@Override
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+		textView.setText("" + progress);
+	}
+	
+	@Override
+	public void onStartTrackingTouch(SeekBar seekBar) {
+		
+	}
+	
+	@Override
+	public void onStopTrackingTouch(SeekBar seekBar) {
+		
+	}
+ });
+ 
