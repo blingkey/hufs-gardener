@@ -1,0 +1,28 @@
+//코드5-19 타임피커: 사용자에게 시간을 보여주거나 선택할 수 있게 해주는 위젯
+<TimePicker
+	android:id="@+id/timePicker"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	
+	//timePickerMode: 타임피커의 형태를 지정하는 속성- clock 시계 형태/ spinner 스피너 형태 
+	android:timePickerMode="clock"  /> 
+	
+//데이트피커와 마찬가지로 타임피커도 ViewGroup을 상속하는 FrameLayout 기반으로 만들어짐
+final TextView textView = findViewById(R.id.textView);
+TimePicker timePicker = findViewById(R.id.timePicker);
+
+timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() { 
+	@Override
+	public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+		textView.setText(hourOfDay + " " + minute);
+	}
+});
+
+//추가적으로 TimePickerDialog 클래스를 사용해서 타임피커를 디이얼로그 형태로 사용할 수 있는 방법
+//OnTimeSetListener 인터페이스는 onTimeSet() 메소드를 가지고 있으며, 사용작 시간을 선택하면 onTimeSet()메소드에 사용자가 선택한 시간(hourOfDay), 분(minute)이 넘어옴
+private TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
+	@Override
+	public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+		textView.setText(hourOfDay + ":" + minute);
+	}
+};
