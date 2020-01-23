@@ -1,5 +1,5 @@
 //코드5-20 툴바 레이아웃XML 
-
+ 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
