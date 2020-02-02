@@ -60,3 +60,26 @@
 		android:text="버튼" />
 		
 </LinearLayout>  
+
+				 //코드6-5 수평 리니어 레이아웃 가중치 XML
+
+<?xml version="1.0" encoding="uft-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:weightSum="3"
+	andordi:orientation="horiziontal">
+	
+	<Button
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="2"
+		android:text="버튼" />
+		
+	<Button
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_text="버튼" />
+		
+</LinearLayout> 
