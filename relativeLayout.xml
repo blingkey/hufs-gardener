@@ -1,0 +1,45 @@
+//코드6-6 렐러티브 레이아웃XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	
+	<TextView
+		android:id="@+id/nameText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:text="이름" />
+		
+	<EditText
+		android:id="@+id/nameEdit"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/nameText"
+		android:layout_toStartOf="@+id/sendButton"
+		android:hint="이름을 입력하세요" />
+		
+	<Button 
+		android:id="@+id/sendButton"
+		android:layout_width="wrap_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_below="@+id/nameText"
+		android:text="전송" />
+		
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:text="이름을 입력하고 전송버튼을 누르세요!" />
+		
+	<Button
+		android:id="@+id/cancelButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:text="취소" />
+		
+</RelativeLayout>
