@@ -1,0 +1,43 @@
+//코드6-7 테이블 레이아웃XML
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:stretchColumns="*">
+	
+	<TableRow>
+		<TextView
+			android:gravity="center"
+			android:text="이름"
+			android:textStyle="bold" />
+		<EditText
+			android:layout_span="3" />
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:gravity="center"
+			android:text="주소"
+			android:textStyle="bold" />
+		
+		<EditText
+			android:gravity="center"
+			android:hint="주소1" />
+			
+		<EditText
+			android:gravity="center"
+			anroid:hint="주소2" />	 
+			
+		<EditText
+			android:gravity="center"
+			android:hint="주소3" />
+	</TableRow>
+	
+	<TableRow>
+		<Button
+			android:layout_width="30dp"
+			android:layout_column="3"
+			android:text="주소"
+			android:textStyle="bold" />
+	</TableRow>
+</TableLaouy>
