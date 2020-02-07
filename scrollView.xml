@@ -1,0 +1,33 @@
+//코드7-1 스크롤뷰 XML
+<?xml version="1.0" encoding="utf=8"?>
+<ScrolView xmlns=android:"http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="300dp"
+		android:background="#FF0000"
+		android:gravity="center"
+		android:text="RED" />
+		
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="300dp"
+		android:background="#00FF00"
+		android:gravity="center"
+		android:text="GREEN" />
+		
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="300dp"
+		android:background="#0000FF"
+		android:text="BLUE" />
+		
+	<LinearLayout>
+</ScrollView> 
