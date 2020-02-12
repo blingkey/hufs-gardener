@@ -1,0 +1,18 @@
+//코드7-10레이아웃파일 row_recyclearview.xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	tools:orientation="vertical">
+	
+	<TextView
+		android:id="@+id/text"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_margin="8dp"
+		android:gravity="center"
+		android:background="@android:color/darker_gray"
+		android:text="item"
+		android:textSize="14sp" 
+		android:textStyle="bold" />
+</LinearLayout> 
