@@ -1,0 +1,20 @@
+//코드9-4 다이얼로그
+new AlterDialog.Builder(this)
+	.setIcon(R.mipmap.ic_launcher)
+	.setTitle("Dialog")
+	.setMessage("메시지를 보여줍니다!!")
+	.setNeutralButton("닫기", null)
+	.setPositiveButton("네", null)
+	.setNegativeButton("아니오", null)
+	.show();
+
+
+//코드9-5 다이얼로그의 다른 작성 방법 
+AlterDialog.Builder dialog = new AlterDialog.Butilder(this);
+dialog.setIcon(R.mipmap.ic_launcher)
+dialog.setTitle("Dialog")
+dialog.setMessage("메시지를 보여줍니다!!")
+dialog.setNeutralButton("닫기", null)
+dialog.setPositiveButton("네", null)
+dialog.setNegativeButton("아니오", null)
+dialog.show();
