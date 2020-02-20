@@ -1,0 +1,10 @@
+//코드10-1 NewActivity 액티비티에 데이터 전달
+Intent intent = new Intent(this, NewActivity.class);
+intent.putExtra("name", "gildong");
+intent.putExtra("age", 30);
+startActivity(intent);
+
+//코드10-2 NewActivity 액티비티에 넘어온 데이터 수신 
+Intent intent = getIntent();
+String name = intent.getStringExtra("name");
+int age = intent.getIntExtra("age", 20);
