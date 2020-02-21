@@ -1,0 +1,43 @@
+//표10-3 전화 걸기
+Intent callIntent = new Intent();
+callIntent.setAction(Intent.ACTION_CALL);
+callIntent.setData(Uri.parse("tel:01012345678"));
+
+startActivity(call);
+
+//표10-4 구글 검색
+Intent searchIntent = new Intent(Intent.ACTION_WEB_SEARCH);
+searchIntent.putExtra(SearchManager.QUERY, "안드로이드");
+
+startActivity("searchIntent");
+
+//표10-5 구글 맵(서울 검색)
+Intent mapIntent1 = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0, 0?q=서울"));
+
+startActivity(mapIntent1);
+
+//표10-6 구글 맵(위도, 경도)
+Intent mapIntent2= new Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.484241, 126.929651"));
+
+startActivity(mapIntent2);
+
+//표10-7 구글 맵(위도, 경도, 확대축소)
+Intent mapIntent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.484241, 126.929651?z=17"));
+
+startActivity(mapIntent3);
+
+//표10-8 주소록
+Intent contactIntent = new Intent();
+contactIntent.setAction(android.content.Intent.ACTION_VIEW);
+contactIntent.setData(ContactsContract.Contacts.CONTENT_URI);
+
+startActivity(contactIntent);
+
+//표10-9 오디오 실행
+File file = new
+FIle(Environment.getExternalStorageDirectory() + "/test.mp3");
+
+Intent audioIntent = new Intent(Intent.ACTION_VIEW);
+audioIntent.setDataAndType(Uri.fromFile(file), "audio/*");
+
+startActivity(audioIntent); 
